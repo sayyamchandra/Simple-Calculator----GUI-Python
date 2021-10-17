@@ -1,0 +1,502 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.7  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Sayyam Chandra">
+	<META NAME="CREATED" CONTENT="20211017;14414145">
+	<META NAME="CHANGEDBY" CONTENT="Sayyam Chandra">
+	<META NAME="CHANGED" CONTENT="20211017;15132345">
+	<META NAME="CHANGEDBY" CONTENT="Sayyam Chandra">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		TD P { margin-bottom: 0cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Times New Roman", serif }
+		H1.cjk { font-family: "SimSun" }
+		H1.ctl { font-family: "Lucida Sans" }
+		H2 { margin-bottom: 0.21cm }
+		H2.cjk { font-family: "SimSun" }
+		H2.ctl { font-family: "Lucida Sans" }
+		TH P { margin-bottom: 0cm }
+		A:link { so-language: zxx }
+		CODE.cjk { font-family: "NSimSun", monospace }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-IN" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<SPAN STYLE="background: #ff3333"><FONT SIZE=7 STYLE="font-size: 32pt">Simple
+GUI Calculator -- Tkinter Module in Python</SPAN></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=7 STYLE="font-size: 32pt">Note:
+Before reading the source code read these points</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western" STYLE="font-style: normal"><FONT COLOR="#25265e"><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=5>What
+is the global keyword</FONT></FONT></FONT></H2>
+<P STYLE="margin-left: 0.05cm; margin-right: 0.05cm; margin-bottom: 0cm; border: 1px solid #d3dce6; padding: 0.05cm 0.11cm; line-height: 0.53cm; widows: 2; orphans: 2">
+<FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">In
+Python, </SPAN></SPAN></FONT></FONT><CODE CLASS="western"><FONT FACE="droid sans mono, inconsolata, menlo, consolas, bitstream vera sans mono, courier, monospace"><FONT SIZE=2><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">global
+</SPAN></SPAN></FONT></FONT></CODE><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">keyword
+allows you to modify the variable outside of the current scope. It is
+used to create a global variable and make changes to the variable in
+a local context.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western" STYLE="font-style: normal"><A NAME="rules-global"></A>
+<FONT COLOR="#25265e"><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=5>Rules
+of global Keyword</FONT></FONT></FONT></H2>
+<P STYLE="margin-left: 0.05cm; margin-right: 0.05cm; margin-bottom: 0cm; border: 1px solid #d3dce6; padding: 0.05cm 0.11cm; line-height: 0.53cm; widows: 2; orphans: 2">
+<FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">The
+basic rules for </SPAN></SPAN></FONT></FONT><CODE CLASS="western"><FONT FACE="droid sans mono, inconsolata, menlo, consolas, bitstream vera sans mono, courier, monospace"><FONT SIZE=2><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">global
+</SPAN></SPAN></FONT></FONT></CODE><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">keyword
+in Python are:</SPAN></SPAN></FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.32cm; border: none; padding: 0cm; font-style: normal; font-weight: normal; line-height: 0.79cm; widows: 2; orphans: 2">
+	<FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt">When
+	we create a variable inside a function, it is local by default.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.05cm; margin-bottom: 0cm; border: 1px solid #d3dce6; padding: 0.05cm 0.11cm; line-height: 0.53cm; widows: 2; orphans: 2">
+	<FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">When
+	we define a variable outside of a function, it is global by default.
+	You don't have to use </SPAN></SPAN></FONT></FONT><CODE CLASS="western"><FONT FACE="droid sans mono, inconsolata, menlo, consolas, bitstream vera sans mono, courier, monospace"><FONT SIZE=2><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">global
+	</SPAN></SPAN></FONT></FONT></CODE><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">keyword.</SPAN></SPAN></FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.05cm; margin-bottom: 0cm; border: 1px solid #d3dce6; padding: 0.05cm 0.11cm; line-height: 0.53cm; widows: 2; orphans: 2">
+	<FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">We
+	use </SPAN></SPAN></FONT></FONT><CODE CLASS="western"><FONT FACE="droid sans mono, inconsolata, menlo, consolas, bitstream vera sans mono, courier, monospace"><FONT SIZE=2><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">global
+	</SPAN></SPAN></FONT></FONT></CODE><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">keyword
+	to read and write a global variable inside a function.</SPAN></SPAN></FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.05cm; margin-bottom: 0cm; border: 1px solid #d3dce6; padding: 0.05cm 0.11cm; line-height: 0.53cm; widows: 2; orphans: 2">
+	<FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Use
+	of </SPAN></SPAN></FONT></FONT><CODE CLASS="western"><FONT FACE="droid sans mono, inconsolata, menlo, consolas, bitstream vera sans mono, courier, monospace"><FONT SIZE=2><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">global
+	</SPAN></SPAN></FONT></FONT></CODE><FONT FACE="euclid circular a, arial, source sans pro, helvetica neue, helvetica, arial, sans-serif"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">keyword
+	outside a function has no effect.</SPAN></SPAN></FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+Grid()</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm; border: none; padding: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2"><A NAME="Python_Tkinter_Grid_Align_Left"></A>
+<FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=6>Python
+Tkinter Grid Align Left</FONT></FONT></FONT></H2>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+	<FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">The
+	</SPAN></SPAN></FONT></FONT></FONT><STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>grid
+	</B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">layout
+	manager in Python Tkinter provides a&nbsp;</SPAN></SPAN></FONT></FONT></FONT><STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>sticky&nbsp;</B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">option
+	that allows aligning the widgets to the LEFT, RIGHT, TOP, BOTTOM
+	direction. In this section, we will see how to set alignment to Left
+	using Grid in Python Tkinter.</SPAN></SPAN></FONT></FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+	<STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>Sticky
+	</B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">requires
+	the first letter of the universal direction in lower case to set the
+	widget in the direction of choice. Here are the options</SPAN></SPAN></FONT></FONT></FONT></P>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+		<STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>sticky
+		= &lsquo;e' : </B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Align
+		to Right</SPAN></SPAN></FONT></FONT></FONT></P>
+		<LI><P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+		<STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>sticky
+		= &lsquo;w': </B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Align
+		to Left</SPAN></SPAN></FONT></FONT></FONT></P>
+		<LI><P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+		<STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>sticky
+		= &lsquo;n': </B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Align
+		to Top</SPAN></SPAN></FONT></FONT></FONT></P>
+		<LI><P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+		<STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><B>sticky
+		= &lsquo;s': </B></SPAN></FONT></FONT></FONT></STRONG><FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Align
+		to bottom</SPAN></SPAN></FONT></FONT></FONT></P>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<BR>
+</P>
+<TABLE WIDTH=536 BORDER=0 CELLPADDING=2 CELLSPACING=0>
+	<COL WIDTH=142>
+	<COL WIDTH=386>
+	<THEAD>
+		<TR>
+			<TH WIDTH=142>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm">
+				<B>Options</B></P>
+			</TH>
+			<TH WIDTH=386>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm">
+				<B>Description</B></P>
+			</TH>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR>
+			<TD WIDTH=142>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				column, row</P>
+			</TD>
+			<TD WIDTH=386>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				The column refers to the verticals cells of the table<BR>row
+				refers to the horizontal cells of the table</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=142>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				columnspan, rowspan</P>
+			</TD>
+			<TD WIDTH=386>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				columnspan merge the columns to provide more space<BR>rowspan
+				merge the rows to provide more space horizontally</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=142>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				ipadx, ipady</P>
+			</TD>
+			<TD WIDTH=386>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				ipadx add pixels vertically in the widget&rsquo;s border<BR>ipady
+				add pixels horizontally in the widget&rsquo;s border</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=142>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				padx, pady</P>
+			</TD>
+			<TD WIDTH=386>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				padx add pixels vertically outside the widget&rsquo;s border<BR>pady
+				add pixels horizontally outside the widget&rsquo;s border</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=142>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				sticky</P>
+			</TD>
+			<TD WIDTH=386>
+				<P ALIGN=LEFT STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: 1.00pt solid #000000; padding-top: 0cm; padding-bottom: 0.21cm; padding-left: 0cm; padding-right: 0.21cm; font-weight: normal">
+				it sticks the widget in North, South, East, west directions.</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<BR>
+</P>
+<H1 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
+<FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt">Python
+lambda</FONT></FONT></FONT></H1>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<FONT COLOR="#273239"><FONT FACE="urw-din, sans-serif"><FONT SIZE=3><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">In
+Python, anonymous function means that a function is without a name</SPAN></SPAN></FONT></FONT></FONT><FONT COLOR="#0f0f0f">
+</FONT>
+</P>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
+<FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt">Syntax:
+lambda arguments : expression </FONT></FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
+<FONT COLOR="#0f0f0f"><FONT FACE="Poppins, sans-serif"><FONT SIZE=4 STYLE="font-size: 15pt">You
+need to keep in your knowledge that lambda functions are
+syntactically restricted to a single expression.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; border: none; padding: 0cm; widows: 2; orphans: 2">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<FONT SIZE=7 STYLE="font-size: 32pt">About</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=7 STYLE="font-size: 32pt">Its
+very easy to use. You have to enter the expression using buttons and
+for calculating the result , press '=' button and the answer will be
+shown in the Entry field. </FONT>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="page1_html_cf78e51.jpg" NAME="graphics1" ALIGN=LEFT WIDTH=275 HEIGHT=333 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<FONT SIZE=7 STYLE="font-size: 32pt">Souce code is&gt;&gt;</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>from tkinter import *</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>expression = &quot;&quot;</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>def press(num):</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	global expression</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	expression = expression +
+str(num)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	equation.set(expression)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>def equalpress():</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	try:</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>		global expression</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>		total =
+str(eval(expression))</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>		equation.set(total)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>		expression = &quot;&quot;</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	except:</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>		equation.set(&quot;
+error &quot;)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>		expression = &quot;&quot;</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>def clear():</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	global expression</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	expression = &quot;&quot;</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	equation.set(&quot;&quot;)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>if __name__ == &quot;__main__&quot;:</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	gui = Tk()</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	gui.configure(background=&quot;#36454F&quot;)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	gui.title(&quot;Simple
+Calculator&quot;)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	gui.geometry(&quot;270x300&quot;)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	equation = StringVar()</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	expression_field =
+Entry(gui, textvariable=equation)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	expression_field.grid(columnspan=4,
+ipadx=70,pady = 10)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button1 = Button(gui,
+text=' 1 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(1), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button1.grid(row=2,
+column=0)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button2 = Button(gui,
+text=' 2 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(2), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button2.grid(row=2,
+column=1)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button3 = Button(gui,
+text=' 3 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(3), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button3.grid(row=2,
+column=2)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button4 = Button(gui,
+text=' 4 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(4), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button4.grid(row=3,
+column=0)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button5 = Button(gui,
+text=' 5 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(5), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button5.grid(row=3,
+column=1)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button6 = Button(gui,
+text=' 6 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(6), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button6.grid(row=3,
+column=2)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button7 = Button(gui,
+text=' 7 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(7), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button7.grid(row=4,
+column=0)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button8 = Button(gui,
+text=' 8 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(8), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button8.grid(row=4,
+column=1)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button9 = Button(gui,
+text=' 9 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(9), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button9.grid(row=4,
+column=2)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button0 = Button(gui,
+text=' 0 ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(0), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	button0.grid(row=5,
+column=0)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	plus = Button(gui, text='
++ ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>				command=lambda:
+press(&quot;+&quot;), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	plus.grid(row=2,
+column=3)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	minus = Button(gui,
+text=' - ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>				command=lambda:
+press(&quot;-&quot;), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	minus.grid(row=3,
+column=3)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	multiply = Button(gui,
+text=' * ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(&quot;*&quot;), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	multiply.grid(row=4,
+column=3)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	divide = Button(gui,
+text=' / ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press(&quot;/&quot;), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	divide.grid(row=5,
+column=3)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	equal = Button(gui,
+text=' = ', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>				command=equalpress,
+height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	equal.grid(row=5,
+column=2)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	clear = Button(gui,
+text='Clear', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>				command=clear, height
+= 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	clear.grid(row=5,
+column='1')</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	Decimal= Button(gui,
+text='.', fg='black', bg='#e8c7c8',</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>					command=lambda:
+press('.'), height = 2, width=7)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>	Decimal.grid(row=6,
+column=0)</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<FONT SIZE=5>	gui.mainloop()</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=5>Done . Thanks You for
+reading....</FONT></P>
+</BODY>
+</HTML>
